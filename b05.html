@@ -125,7 +125,7 @@
                         <li><a href="https://componentsearchengine.com/">Buscador de componentes</a></li>
                         </ul>
                         <h3 class="mb-3 font-weight-bold">2.-Considera tus Metodos de fabricacion en tu diseño.</h3><br>
-                        <img class="w-50 float-right mr-4 mb-3" src="img/b05/fig2-metodos-de%20fabricacion.png" alt="Image">
+                        <img class="w-75 float-right mr-4 mb-3" src="img/b05/fig2-metodos-de%20fabricacion.png" alt="Image">
                         <p>Este punto a parte de ahorrarte mucho tiempo es, en mi opinion, parte fundamental de la mentalidad del diseñador, el metodo de fabricacion, dicta naturalmente factores de dorma y acomodo de muchos elementos dentro del diseño no solo en electronica.</p>
                         <p>no es lo mismo dibujar una placa que sera grabada con acido mediante una reaccion quimica a dibujar una placa que sera grabada con un cortador mecanicamente, las tolerancias entre las pistas seran diferentes, el espaciado entre los componentes sera diferente,etc.</p>
                         <p>en el Fablab donde trabajo contamos un un router CNC de escritorio que nos permita la fabricacion de placas de una cara de cobre.</p>
@@ -143,10 +143,41 @@
                         <p ><a style="align-items: baseline" href="RP2040_THT_Invertido.lbr">este es el mero link</a></p>
                     </div>
                     <h3 class="mb-3 font-weight-bold">3.-Evita angulos rectos</h3><br>
+                    <img class="w-75 float mr-4 mb-3" src="img/b05/figx-evita-angulos-rectos.png" alt="Image">
+                    
+                    <p>Las normas IPC regulan la forma en la que se diseñan y fabrican las placas de circuitos electronico. Sin embargo, para un maker son solo guias para no cometer tantos errores.</p>
+                    <p>uno de los apartados de las normas IPC en las que me gustaria hacer hincapie, es el trazado de las pistas, cuando se crea una red de pistas es importante crear pistas que tengan cambios de dirección con un angulo minimo de 45° entre los dos componentes como en la figura.</p>
+                    <p>aparte de que es parte de la norma, es muy conveniente, ya que el angulo a 90° es mucho mas facil que el cobre se desprenda de el sustrato aislante.</p>
                     <h3 class="mb-3 font-weight-bold">4.-Ten claras las normas y crea tus reglas de diseño acorde.</h3><br>
+                    <p>El hecho de que las normas no nos restringan en creatividad no quiere decir que podemos hacer lo que sea.</p>
+                    <p>De hecho, las normas de diseño electronico estan para ser una guia en el proceso creativo, les voy a compartir unas capturas de la configuracion de mi DRC o Design Rule check.</p>
+                    <img class="w-75 float-right ml-4 mb-3"src="img/b05/figx-drc1.png" alt="Image"><br>
+                    <p>fig4.1.-La distancia entre dos pistas debe ser por lo menos 3 veces el diametro del cortador.</p>
+                    <br>
+                    <img class="w-75 ml-4 mb-3"  src="img/b05/figx-drc2.png" alt="Image"><br>
+                    <p>fig4.2.- La distancia al borde de la placa es mas a discrecion, yo por lo general pongo 1 milimetro de cada pad a el bordesavlo que haya un componente que sea importande tener cerca del borde (como un conector USB por ejemplo.)</p>
+                    <img class="w-75 float-left ml-4 mb-3" src="img/b05/figx-drc3.png" alt="Image"><br>
+                    <p>fig 4.3.-El grosor de la pista varia en funcion de la carga electrica que fluye atraves de ella. Sin embargo por regla general en el fablab el grosor de las pistas de datos debe ser por lo menos 3 veces el diametro del cortador. </p>
+                    <p>por logica las pistas con energia DEBEN ser mas gruesas que las de datos.</p>
+                    <p></p>
                     <h3 class="mb-3 font-weight-bold">5.-Considera los footprints en la orientacion adecuada.</h3><br>
+                    <p>La huella o footprint define el factor de forma o paquete de el componente.</p>
+                    <p>Es importante escoger el footprint correcto, ya que darse cuenta en el final del proceso de diseño no es tan catastrofico como echar a perder material y tiempo de una tanda de piezas fisicas.</p>
+                    <p>mi recomendacion:</p>
+                    <p>Ve a tu proveedor local de piezas electronicas, en mi pais el mas popular se llama <a href="https://www.steren.com.mx/">Steren</a> ellos tienen una gran cantidad de componentes con documentacion disponible en su pagina web y el personal de su tienda por lo general tienen suficientes conocimientos como para decirte el formato de forma del paquete que te estan vendiendo. </p>
+                    <img class="w-75 ml-4 mb-3"src="img/b05/figx-escoge-correctamente-tu-footprint.png" alt="Image"><br>
+                    <p>Asi como en la imagen.</p>
+                    <p>un mismo componente es vendido en diferentes "paquetes", para el ejemplo de le imagen puede ser THT o Through Hole Technology, tambien podria ser de soldadura directa sobre el cobre, o surface mount technology </p>
                     <h3 class="mb-3 font-weight-bold">6.-Coloca tus capacitores de desacople lo mas cerca del micro podible.</h3><br>
+                    <p>El concepto de condensador de desacople es un poco mas profundo de lo que yo pueda elaborar aqui, y existen muchisimos mas recursos profesionales que hacen un mejor trabajo que yo aqui. Sin embargo, aqui les va.</p><br>
+                    <p>En una señal de energia de un conductor existen dos tipos de Corriente alterna y de corriente continua, usualmente si un componente funciona con un tipo de energia la otra simplemente es disipada como calor. </p>
+                    <p>sin embargo, en algunas aplicaciones, los componentes del otro tipo de energia se tratan como "ruido" y este ruido puede alterar la funcion o incluso destruir el componente. Usualmente usamos un capacitor de desacople en la entrada de energia de un microcontrolador para asi separar las componentes de corriente alterna y solo dejar pasar la corriente continua al microcontrolador.</p>
+                    <img class="w-75 ml-4 mb-3"src="img/b05/figx-capacitores-de-desacople-cerca-del-micro.png" alt="Image"><br>
+                    <p>En el ejemplo de la imagen el componente llamado U1 es un microcontrolador en los pads verdes localizados arriba a la derecha son llamados VCC y GND respectivamente, lo que se encuentra conectado a el es un Capacitor ceramico usualmente uF0.1 es un valor suficiente para lograr un desacople.</p>
+                    <p>Usualmente, una distancia de 1cm a 2 cm es buen lugar para colocarlo.</p>
                     <h3 class="mb-3 font-weight-bold">7.-no pierdas el tiempo dibujando el contorno de la placa en el EDA</h3><br>
+                    <p></p>                             <br>
+                    <p></p>
                     <h3 class="mb-3 font-weight-bold">8.-Apaga las capas inutiles.</h3><br>
                     <h3 class="mb-3 font-weight-bold">9.-protege tu tus diseños de cortocircuito.</h3>
                     <br>
