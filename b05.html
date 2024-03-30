@@ -176,13 +176,32 @@
                     <p>En el ejemplo de la imagen el componente llamado U1 es un microcontrolador en los pads verdes localizados arriba a la derecha son llamados VCC y GND respectivamente, lo que se encuentra conectado a el es un Capacitor ceramico usualmente uF0.1 es un valor suficiente para lograr un desacople.</p>
                     <p>Usualmente, una distancia de 1cm a 2 cm es buen lugar para colocarlo.</p>
                     <h3 class="mb-3 font-weight-bold">7.-no pierdas el tiempo dibujando el contorno de la placa en el EDA</h3><br>
-                    <p></p>                             <br>
+                    <p>sin duda una recomendacion para los que dominan por lo menos una herramienta de CAD ya, si estas comenzando y no tienes muchas idea de como hacer el borde de tu placa es bueno comenzar con figuras simples como rectangulos o poligonos regulares.</p>
+                    <p>Sin embargo, si ya tienes en mente hacer geometrias un poco mas creativas y libres, el modelador de kiCAD o eagle te permiten importar un archivo de DXF, solo recuerda que las unidades del software donde modeles afecten el resultado a la hora de verlo en los softwares de diseño electronico, solo es cuestion de escalar. por ejemplo si dibujas en Centimetros en autocad deberas dividir 1/10 a la hora de importarlo en KiCAD configurado en milimetros.</p><br>
+                    <p><b>Pro TIP:</b> puedes usar la herramienta Importar DXF en el modelador de placas para incrustar tu logo en la placa y personalizarla aun mas.</p><br>
                     <p></p>
                     <h3 class="mb-3 font-weight-bold">8.-Apaga las capas inutiles.</h3><br>
+                    <p>Aunque, desconozco si kiCAD hace esto, si que lo hace Eagle.</p>
+                    <br>
+                    <p>El software que yo uso crea las capas por default en la industria (superior, silk, nombres de componentes, inferior, valores,dimensiones,etc.</p>
+                    <p>puede ser un poco abrumador y confuso trabajar con tantas capas al mismo tiempo.</p>
+                    <p>mi recomendacion es simplemente apagarlas, bloquearlas o de plano borrarlas si no las vas a estar necesitando.</p><img class="w-100 mb-3"src="img/b05/fig8.2-capas-normales.png" alt="Image"><br>
+                    <a>fig8.1-capas normales encendidas durante el diseño.</a>
+                    <p>en la etapa de prototipado de una capa de cobre he encontrado que con que tengas la capa superior, dimension, plataformas y barrenos, es mas que suficiente. </p>
+                    <img class="w-100 mb-3"src="img/b05/fig8.1-capas-fabricacion.png" alt="Image"><br>
+                    <a>fig8.2-Capas ideales para generar el archivo de fabricacion.</a><br>
+                    <p>puedes tener nombres,valores y componentes encendido sin embargo para generar la imagen png que esl o que usamos para fabricar estorbaran entonces es necesario que las apagues momentaneamente.</p>
                     <h3 class="mb-3 font-weight-bold">9.-protege tu tus diseños de cortocircuito.</h3>
                     <br>
-                    <p>barniz</p>
-                    <h3 class="mb-3 font-weight-bold">10.- El grosor de las pistas depende de la funcion que cumplen.</h3><br>
+                    <p>Muchas veces al probar nuestro circuito es normal que sujetemos nuestra placa tocando con nuestros dedos desnudos las pistas o pines de prueba.</p>
+                    <p>Algo muy simple que podemos hacer para evitar esto es pasarle una capa o 2 de barniz para uñas ya sea de algun color o transparente esto crea una pelicula aislante que evita que nuestros dedos generen un corto circuito, aparte de que hace es se vea mas limpio por que el barniz impide que el oxigeno oxide el cobre de las pistas.</p>
+                    <h3 class="mb-3 font-weight-bold">10.- Configura las preferencias para que se pueda fabricar.</h3><br>
+                    <p>En el software que yo ocupo he encontrado que luego los nombres de los pads y las pistas suelen transferirse en la imagen.</p>
+                    <img class="w-100 mb-3"src="img/b05/fig10.3-imagen%20mal.png" alt="Image"><br>
+                    <p>por lo que es necesario entrar a esta ventana en preferencias.</p>
+                    <img class="w-100 mb-3"src="img/b05/fig10.4-preferencias.png" alt="Image"><br>
+                    <p>entonces al generar esta seria la diferencia.</p>
+                    <img class="w-100 mb-3"src="img/b05/fig10.6-imagen-bien.png" alt="Image"><br>
                     <div class="col-12 py-4">
                         <div class="btn-group btn-group-lg w-100">
                             <button type="button" class="btn btn-outline-primary"><a href="b04.html"><i class="fa fa-angle-left mr-2"></i> Previous</a></button>
