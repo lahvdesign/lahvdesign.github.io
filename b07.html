@@ -94,16 +94,152 @@
                 <div class="row px-4">
                     <div class="col-12">
                         <img class="img-fluid mb-4" src="img/detail.jpg" alt="Image">
-                        <h2 class="mb-3 font-weight-bold">Nonumy ipsum takimata et sanct</h2>
+                        <h2 class="mb-3 font-weight-bold">Grasshopper 102</h2>
                         <div class="d-flex">
-                            <p class="mr-3 text-muted"><i class="fa fa-calendar-alt"></i> 01-Jan-2045</p>
-                            <p class="mr-3 text-muted"><i class="fa fa-folder"></i> Web Design</p>
-                            <p class="mr-3 text-muted"><i class="fa fa-comments"></i> 15 Comments</p>
+                            <p class="mr-3 text-muted"><i class="fa fa-calendar-alt"></i> 05/07/2024</p>
+                            <p class="mr-3 text-muted"><i class="fa fa-folder"></i> Diseño paramétrico</p>
                         </div>
-                        <p>Clita duo sadipscing amet ea ut kasd amet dolore, sed erat at dolore vero tempor et sit amet, amet amet elitr et consetetur ea duo. Gubergren tempor rebum clita at sit diam. Ea sadipscing voluptua et sit diam diam sed, gubergren magna ipsum lorem clita dolores nonumy dolor. Gubergren duo invidunt elitr amet labore dolores justo sanctus nonumy. Accusam diam tempor at ea clita dolores dolor et ipsum, dolor voluptua consetetur gubergren sit, no consetetur kasd vero invidunt clita dolore elitr eos, accusam amet et labore sed sadipscing accusam labore dolores. Eirmod no lorem sed dolor nonumy consetetur tempor sed.</p>
-                        <h3 class="mb-3 font-weight-bold">Est dolor lorem et ea</h3>
-                        <img class="w-50 float-left mr-4 mb-3" src="img/blog-1.jpg" alt="Image">
-                        <p>Diam dolor est labore duo invidunt ipsum clita et, sed et lorem voluptua tempor invidunt at est sanctus sanctus. Clita dolores sit kasd diam takimata justo diam lorem sed. Magna amet sed rebum eos. Clita no magna no dolor erat diam tempor rebum consetetur, sanctus labore sed nonumy diam lorem amet eirmod. No at tempor sea diam kasd, takimata ea nonumy elitr sadipscing gubergren erat. Gubergren at lorem invidunt sadipscing rebum sit amet ut ut, voluptua diam dolores at sadipscing stet. Clita dolor amet dolor ipsum vero ea ea eos. Invidunt sed diam dolores takimata dolor dolore dolore sit. Sit ipsum erat amet lorem et, magna sea at sed et eos. Accusam eirmod kasd lorem clita sanctus ut consetetur et. Et duo tempor sea kasd clita ipsum et. Takimata kasd diam justo est eos erat aliquyam et ut. Ea sed sadipscing no justo et eos labore, gubergren ipsum magna dolor lorem dolore, elitr aliquyam takimata sea kasd dolores diam, amet et est accusam labore eirmod vero et voluptua. Amet labore clita duo et no. Rebum voluptua magna eos magna, justo gubergren labore sit voluptua eos. Dolores et no stet magna et gubergren amet dolor sit, lorem dolore est vero et.</p>
+                        <div><h3 class="mb-3 font-weight-bold">Contenedores entradas y curvas</h3></div>
+                        <h4>descargo de responsabilidad:</h4>
+                        <p>LAHV Design es un proyecto personal sin fines de lucro, todos los recursos(redactados y/o descargables)  aquí compartidos son libres de uso, sin embargo no me hago responsable de ninguna manera de las decisiones que terceros tomen con dicho recuso. </p>
+                        <p>En el articulo anterior hablamos sobre cómo se componen y como se conectan entre ellos los componentes de un algoritmo de GH.</p>
+                        <p>Ahora hablaremos sobre tipos específicos de componentes y la forma en que mejor podemos usarlos para sacarles todo el provecho y para ello haremos un par de ejemplos.</p>
+                        <p>El archivo de este tutorial lo dejare hasta el final para que lo puedas descargar.</p>
+                        <p>Los contenedores como su nombre lo indica sirven para almacenar diversa información </p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/01.png" alt="Image">
+                        <p> En la imagen anterior podemos ver los tipos más comunes de contenedores y los objetos que almacenan en cada caja de texto a excepción del llamado “Geometry pipeline” que mencionaremos más tarde.</p>
+                        <p>Para el primer grupo de estos contenedores podemos observar similitudes en cuanto forma.</p>
+                        <p>El icono de cada uno de ellos tiene un hexágono de un color negro solido y encima tienen un icono en blanco que representa lo que almacena.</p>
+                        <p>Todos tienen una entrada, una salida y ninguna de estas tienen etiqueta de nombre porque se sobre entiende que lo que entra es lo mismo que sale ya que solo almacenan información.</p>
+                        <p>Vamos a usar uno de ellos ahora mismo para almacenar información de una serie de puntos.</p>
+                        <p>Si hago un clic derecho sobre el icono de un componente puedo ver algunas configuraciones de visualización, de estado o del algoritmo.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/02.png" alt="Image">
+                        <p>Ahora me interesa hacer clic en “set multiple points”.</p>
+                        <p>Enseguida me transporto a la ventana de rhino y comienza a hacer clics.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/03.png" alt="Image">
+                        <p> En la parte de la barra de comando te dará una sugerencia de lo que es necesario hacer para esta operación. Una vez que termines de hacer clics haz clic derecho o da enter.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/04.png" alt="Image">
+                        <p>En ese momento los puntos se colocan en el entorno de GH por lo que los veremos en el entorno de rhino.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/05.png" alt="Image">
+                        <p>Si selecciono el contenedor se iluminarán en color verde los elementos de ese componente.</p>
+                        <p>Ya que hicimos un poco al azar esos puntos te puedes dar cuenta rotanto la vista o activando una de las vistas auxiliares que los puntos están todos en el plano de origen XY de rhino.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/06.png" alt="Image">
+                        <p>Vamos a hacer esa nube de puntos un poco mas interesante y manipularemos sus posiciones individualmente, para hacer esto de la manera simple encenderemos el gumball de GH ya que por defecto viene apagado. Vamos a la barra de menú y buscamos el gumball en la categoría de “display”, lo encenderemos y procederemos a arrastrar las flechas azules (en el eje Z) con el mouse.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/07.png" alt="Image">
+                        <p>Vamos a hacer esa nube de puntos un poco mas interesante y manipularemos sus posiciones individualmente, para hacer esto de la manera simple encenderemos el gumball de GH ya que por defecto viene apagado. Vamos a la barra de menú y buscamos el gumball en la categoría de “display”, lo encenderemos y procederemos a arrastrar las flechas azules (en el eje Z) con el mouse.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/08.png" alt="Image">
+                        <p>Ya estoy satisfecho con este resultado entonces vamos a ver que sucede dentro del componente. Colocaremos un componente aquí llamado “panel” lo buscaremos haciendo doble clic y tecleando este nombre.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/09.png" alt="Image">
+                        <p>Esto básicamente es un campo de texto editable y programable si yo le conecto algo en la entrada este servirá como una pantalla y me mostrara un poco mas espeficico lo que hay dentro del componente y sí le hago doble clic puedo escribir los caracteres específicos que quiero introducir como entrada a un componente.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/10.png" alt="Image">
+                        <p>Para este ejercicio podemos observar de lado derecho {0} esta es la “Branch” o rama de la estructura de árbol {0} esto nos indica que básicamente estamos en el tronco de la estructura de árbol, por ahora no te preocupes por eso lo mencionaremos cuando veamos listas por el momento es suficiente con que notes que hay 6 objetos en la lista y cada uno corresponde a los puntos que colocamos en rhino anteriormente, lo curioso es que están numerados del 0 al 5 donde el cero siempre es el primer elemento de la lista.</p>
+                        <p>Colocaremos un elemento extra que nos sirve para ver estos índices del 0-5. </p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/11.png" alt="Image">
+                        <p>Con el componente “point order” podemos ver con una flecha negra cual es el siguiente punto de la lista y con el componente “point list” podemos ver el orden de los índices de los objetos esto nos ayuda de manera visual para poder identificar el orden de los puntos.</p>
+                        <p>Si eres suficientemente observador te darás cuenta que el punto cero es el primer clic que hicimos cuando definimos la asignación de los puntos al componente de puntos. Por lo que si aquí en GH el orden de los valores si altera el resultado.</p>
+                        <p>Ahora colocaremos un componente llamado “polyline”</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/12.png" alt="Image">
+                        <p>Y la entrada V la conectaremos con nuestro contenedor de puntos.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/13.png" alt="Image">
+                        <p> y veamos lo que sucede, paso de ser 6 objetos a ser uno solo aparte de por el grosor de las líneas nos podemos dar cuenta por el contenido de los paneles.</p>
+                        <p>En el componente hay una entrada que yo no conecté y es un valor booleano. Veamos mas de cerca. Y aprendamos lo que hay que hacer</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/14.png" alt="Image">
+                        <p>Okay un valor booleano, es un dato que solo puede tener 2 valores a estos datos también los llamamos valores binarios. Puede ser alto o bajo, arriba o abajo, encendido o apagado, adentro o afuera, si o no, verdadero o falso, pero no ambos a la vez. Lo que quiere decir que son mutuamente excluyentes. Existe un tema muy interesante de matemáticas booleanas que no entra en el contenido de estos artículos pero, en fin, sigamos.</p>
+                        <p>El valor de una entrada lo podemos asignar de diferentes maneras.</p>
+                        <p>Veamos varias formas de hacer asignar este valor.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/15.png" alt="Image">
+                        <p>Al hacer clic derecho sobre la entrada “C” puedo ver que hay una categoría en “set boolean” y puedo ahora asignar un valor verdadero donde ahora es falso.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/16.png" alt="Image">
+                        <p>De igual forma puedo hacer clic derecho y hacer clic en “invert” esto lo que hará será dar el valor contrario a lo que sea que en este momento este asignado y como por ahora es falso, al seleccionar “invert” este será verdadero.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/17.png" alt="Image">
+                        <p>Otra forma de conectar una entrada es con un panel, como te mencione puedes escribir un texto y asignarlo como un valor a una entrada si el texto solo dice “true” ó “false” este será tomado como un valor Booleano.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/18.png" alt="Image">
+                        <p>También funciona un panel con el numero uno escrito en el.</p>
+                        <p>Pero paneles no son la única forma de asignar valores de entrada de forma visual. Veamos otras.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/19.png" alt="Image">
+                        <p>En la pestaña de “params” dentro de la categoría “input” podemos ver que se encuentra el panel junto con otros componentes, explicare los más básicos y comunes de usar. Son componentes de entrada todos en función hacen lo mismo crean un dato que usamos como valor de entrada, pueden ser valores numéricos, alfanuméricos, booleanos, etc.</p>
+                        <p>Por mucho la forma mas popular de asignar un valor numérico o booleano es un “number slider”</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/20.png" alt="Image">
+                        <p>Básicamente es una “barrita” deslizable que cada línea de la recta numérica es un valor dentro de un rango de valores.</p>
+                        <p>En la imagen anterior este numero es 0.250 por defecto. Puedo interactuar con el de 3 maneras diferentes. Doble clic sobre el texto de la parte color gris.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/21.png" alt="Image">
+                        <p>esto hace salir las propiedades del componente.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/22.png" alt="Image">
+                        <p>Sujetar el punto del centro y arrastrarlo con el mouse para cambiar los valores.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/23.png" alt="Image">
+                        <p>Si haces doble clic sobre el valor numérico se vuelve un campo de texto editable. (esto es super útil cuando necesitas probar con un valor exacto y el método de deslizamiento brinca entre 2 valores que no te sirven.</p>
+                        <p>Regresemos a la primera imagen la de la ventana de las propiedades.  </p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/24.png" alt="Image">
+                        <p>En esta ventana podemos configurar el valor mínimo, el valor máximo, el valor actual, el rango de valores y el tipo de valores.</p>
+                        <p>Las características de dominio y valor numéricos son bastante auto explicativas, sin embargo, en “slider accuracy” podemos determinar el tipo de número que queremos generar.</p>
+                        <p>R de numero con punto decimal (Real), N de números enteros (Natural), E de numero par (Even), O de numero impar (Odd).</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/25.png" alt="Image">
+                        <p>Por ejemplo, vamos a crear un “slider” para números booleanos que solo son binarios entonces escogeremos la siguiente combinación de características.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/26.png" alt="Image">
+                        <p>Volviendo a nuestro ejemplo de la polilínea este será una polilínea cerrada cuando el valor sea uno y será una polilínea abierta cuando el valor sea cero.</p>
+                        <p>Otra forma de asignar un valor booleano es colocando un “boolean toogle” o switch booleano, lo encuentras en la pestaña de “params” en la categoría de “input”.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/27.png" alt="Image">
+                        <p>Este cambiará el valor al hacer doble clic en la palabra en color gris oscuro.</p>
+                        <p>Una forma mas es usar un selector de lista desplegable.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/28.png" alt="Image">
+                        <p>También lo encuentras en “params”> “input” y la hacer un clic sobre el se despliegan las opciones disponibles para seleccionar. Al hacer doble clic con el mouse se puede configurar.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/29.png" alt="Image">
+                        <p>Este es configurable y puede tener tantas opciones como renglones tenga. Lo que se encuentre después del símbolo de igual será considerado el valor que sale del componente.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/30.png" alt="Image">
+                        <p>Como en este ejemplo que los valores pueden ser en orden descendente números (zero y one), Ecuaciones matemáticas (valor 2), Funciones matemáticas como la raíz cuadrada de 16 (la opción “cuatro”) la cual es igual a el numero natural cuatro, pueden ser caracteres de texto simple como el carácter p minúscula (tiene que ser encerrado entre comillas forzosamente para que lo reconozca como un carácter de texto), así como en la opción seis el valor de salida es una cadena de caracteres encerrado entre comillas.</p>
+                        <p>Como te puedes dar cuenta hay varias formas de llegar a un solo resultado. Es muy fácil usar un number slider y un panel, sin embargo, conforme te comiences a sentir cómodo usando GH esto se volverá tedioso de ver y un poco confuso para ser honesto.</p>
+                        <p>Sin embargo, en la practica cuando desarrollamos códigos, mientras más claro sea, más fácil será identificar problemas. Una de las primeras habilidades que deberás estar pensando en desarrollar, es empezar a practicar la limpieza de tus códigos. Si en tu definición ocupas solo number slider para todo o puro panel, entonces será muy confuso de leer. Por lo tanto, tienes dos opciones.</p>
+                        <ol>
+                        <li>Puedes ocupar number sliders para definir números enteros o decimales, entradas de caracteres de texto con paneles y botones booleanos para valores booleanos.</li>
+                         <li>Puedes crear grupos de colores para identificar secciones de código y crear tu propio sistema de colores.</li>   
+                        </ol>
+                        <p>Mas adelante veremos consejos para utilizar mejor el entorno de trabajo en GH.</p>
+                        <p>Así como puedes definir objetos en rhino desde grasshopper ahora haremos lo opuesto, definiremos un objeto en grasshopper usando geometrías de rhino.</p>
+                        <p>Y comenzaremos haciendo un rectángulo esto lo podemos hacer con el boton de la operación o tecleando el comando rectangle. Definiendo el punto inicial de nuestro rectángulo y el punto final.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/31.png" alt="Image">
+                        <p>Podemos colocar un contenedor de curva, haciendo clic derecho podremos seleccionar un objeto tipo curva (abierta o cerrada) en rhinoceros.</p>
+                        <p>Una vez con la curva dentro del contendor podemos hacer diferentes cosas con ello. En este momento solo hare referencia al ejemplo del artículo anterior.</p>
+                        <p>Colocando un “box rectangle” y conectándolo con el contendor de curva.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/32.png" alt="Image">
+                        <p>el panel con el numero veinte define la altura del cubo.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/33.png" alt="Image">
+                        <p>Si yo selecciono varios objetos y hago clic derecho veremos los primeros dos botones encienden y apagan la previsualización de objetos seleccionados, si lo hacemos notaremos algo</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/34.png" alt="Image">
+                        <p>se escondio todo excepto el rectángulo que definimos en rhino, ya que las operaciones de rhino no se ven en grasshoper hasta que las introducimos manualmente con contenedores.</p>
+                        <p>Al contrario  si enciendo los componentes y trato de moverlos desde la ventana de rhinoceros no es posible.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/35.png" alt="Image">
+                        <p>Aquí puedes ver como el gumball solo me permite seleccionar la geometría en rhino.</p>
+                        <p>Entonces yo recomiendo siempre mantener registro de que geometrías están apagadas tanto en rhino como en grasshopper para no mover algo por error y así alterar nuestro algoritmo por equivocación. En definiciones simples esto no es gran problema sin embargo cuando estamos lidiando con una serie de transformaciones que se miden desde el plano 0,0,0 de rhinoceros estos errores pueden ser difíciles de encontrar.</p>
+                        <p>La solución es ir apagando los componentes que ya no vamos a estar usando, para el ejemplo de esta definición tan simple es conveniente solo apagar el rectángulo desde rhino y el contenedor de curva desde el contenedor de GH.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/36.png" alt="Image">
+                        <p>En resumen, de este articulo existen varias formas de agregar geometrías de rhinoceros en grashopper</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/37.png" alt="Image">
+                        <p>Cada objeto tiene su contenedor y cada objeto tiene su denominación en grasshopper como podemos ver en la imagen superior en el panel cada objeto correspondiente en la ventana de rhino corresponde a uno de los índices del 0-5 de la lista del panel.</p>
+                        <p>Con curvas desde GH podemos hacer un par de cosas bastante interesantes.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/38.png" alt="Image">
+                        <p>Vamos a tomar una simple curva abierta generada en rhino e importada en GH con un contenedor y vamos a hacerle una serie de operaciones de curvas.</p>
+                       <img class="w-100 mr-4 mb-3" src="img/b07/39.png" alt="Image">
+                        <p>Con el comando “divide curve” podemos colocar puntos a lo largo de cualquier curva y colocarlo un slider, si eres observador te darás cuenta del símbolo de asterisco junto a la entrada “N” esto significa que esta restringida por una expresión si le hago un clic derecho.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/40.png" alt="Image">
+                        <p>Aquí podemos ver la expresión que le asigné significa que el valor variable “x” tendrá una disminución en 1 para asignar el valor real. En este caso como el slider esta colocado en 11 porque quiero dividir la curva en 11 puntos y como GH por su naturaleza comienza a contar desde el cero hasta el once me esta generando 12 elementos lo que hice es restarle siempre uno para que el componente divida la curva en la cantidad exacta que marca mi slider.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/41.png" alt="Image">
+                        <p>Si no nos importa la cantidad de puntos y lo que nos importa es definir la distancia entre 2 puntos podemos colocar el comando “divide length”. Y este lo que hace es dividirla con puntos separados por la distancia definida en la entrada “L”.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/42.png" alt="Image">
+                        <p>Si lo que nos interesa realmente es solo saber la longitud total de la curva que estamos manejando podemos colocar el comando “length” y con un panel conectado a la salida podemos ver la distancia total de todas las curvas en el contenedor.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/43.png" alt="Image">
+                        <p>Si solo necesitas colocar con precisión un punto sobre la curva el componente “point on curve” te sirve como una especie de slider para mover 1 punto sobre la curva.</p>
+                        <img class="w-100 mr-4 mb-3" src="img/b07/44.png" alt="Image">
+                        <p> podemos convertir una spline o curva definida por puntos de control en polilínea en el lado derecho ocupamos un componente llamado “curve to polyline” para dividir la curva con ciertos parámetros de tolerancia para ajustarse a la curva original y en la salida nos dice el numero de cuantos elementos géneros y nos brinda ese elemento en un solo objeto, después le hice un “explode” para poder descomponer ese objeto en 33 objetos individuales.</p>
+                        <p>Hemos llegado al final de este artículo, como siempre espero que este recurso te haya sido de ayuda. Te recuerdo que te dejo en un archivo comprimido el archivo de rhino .3dm y el archivo de grashopper .gh para que puedas ver mejor lo que vimos en este articulo.</p>
+                        <p></p>
+                        <a href="doc/blog/b06/gh1.rar">
+                        descarga los documentos de este articulo desde aqui.</a>
+                        
+                        
+                        
+                        
+                        
+                        
                     </div>
                     <div class="col-12 py-4">
                         <div class="btn-group btn-group-lg w-100">

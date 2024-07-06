@@ -98,11 +98,88 @@
                         <div class="d-flex">
                             <p class="mr-3 text-muted"><i class="fa fa-calendar-alt"></i> 05/07/2024</p>
                             <p class="mr-3 text-muted"><i class="fa fa-folder"></i> Diseño parametrico</p>
+                            
                         </div>
-                        <p>Clita duo sadipscing amet ea ut kasd amet dolore, sed erat at dolore vero tempor et sit amet, amet amet elitr et consetetur ea duo. Gubergren tempor rebum clita at sit diam. Ea sadipscing voluptua et sit diam diam sed, gubergren magna ipsum lorem clita dolores nonumy dolor. Gubergren duo invidunt elitr amet labore dolores justo sanctus nonumy. Accusam diam tempor at ea clita dolores dolor et ipsum, dolor voluptua consetetur gubergren sit, no consetetur kasd vero invidunt clita dolore elitr eos, accusam amet et labore sed sadipscing accusam labore dolores. Eirmod no lorem sed dolor nonumy consetetur tempor sed.</p>
-                        <h3 class="mb-3 font-weight-bold">Est dolor lorem et ea</h3>
-                        <img class="w-50 float-left mr-4 mb-3" src="img/blog-1.jpg" alt="Image">
-                        <p>Diam dolor est labore duo invidunt ipsum clita et, sed et lorem voluptua tempor invidunt at est sanctus sanctus. Clita dolores sit kasd diam takimata justo diam lorem sed. Magna amet sed rebum eos. Clita no magna no dolor erat diam tempor rebum consetetur, sanctus labore sed nonumy diam lorem amet eirmod. No at tempor sea diam kasd, takimata ea nonumy elitr sadipscing gubergren erat. Gubergren at lorem invidunt sadipscing rebum sit amet ut ut, voluptua diam dolores at sadipscing stet. Clita dolor amet dolor ipsum vero ea ea eos. Invidunt sed diam dolores takimata dolor dolore dolore sit. Sit ipsum erat amet lorem et, magna sea at sed et eos. Accusam eirmod kasd lorem clita sanctus ut consetetur et. Et duo tempor sea kasd clita ipsum et. Takimata kasd diam justo est eos erat aliquyam et ut. Ea sed sadipscing no justo et eos labore, gubergren ipsum magna dolor lorem dolore, elitr aliquyam takimata sea kasd dolores diam, amet et est accusam labore eirmod vero et voluptua. Amet labore clita duo et no. Rebum voluptua magna eos magna, justo gubergren labore sit voluptua eos. Dolores et no stet magna et gubergren amet dolor sit, lorem dolore est vero et.</p>
+                        <div><h3 class="mb-3 font-weight-bold">interfaz y trabajo simultaneo Rhino/GH, componentes.</h3></div>
+                        <div><h4>descargo de responsabilidad:</h4>
+                        <br><p>LAHV Design es un proyecto personal sin fines de lucro, todos los recursos(redactados y/o descargables)  aquí compartidos son libres de uso, sin embargo no me hago responsable de ninguna manera de las decisiones que terceros tomen con dicho recuso. </p></div>
+                        <p>Como ya sabemos Grashopper (GH) es una herramienta muy potente de programación visual para rhinoceros 3D (Rhino) basada en el lenguaje de programación Python, herramienta que nos permite asignar valores alfanuméricos a parámetros dentro de un diseño de Rhino. En esta entrada de mi blog intentaré explicar en la medida de mis capacidades los conceptos de los componentes más comunes usados en GH.</p>
+                        <h4 class="mb-3 font-weight-bold">Entorno de trabajo</h4>
+                        <p>Primero comenzaremos abriendo un archivo nuevo de rhino en milímetros. Para poder lanzar una instancia o ventana de grashopper lo que podemos hacer es hacer clic en la pestaña de standard y después hacer clic en el icono de grashopper.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/01.png" alt="Image">
+                        <p>Otra forma de hacerlo es tecleando el comando <mark style="background-color: yellow" >grashopper</mark> en la barra de comandos de rhino.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/02.png" alt="Image">
+                        <p>Se nos abrirá una ventana como la que sigue.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/03.png" alt="Image">
+                        <p>En esta podemos identificar el nombre de nuestro archivo actualmente no guardado</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/04.png" alt="Image">
+                        <p>Así como la barra de herramientas con archivo, editar, ver, display, solución y ayuda. Y las pestañas de herramientas.</p>
+                        <p>De donde podemos sacar los componentes necesarios para realizar nuestros diseños.</p>
+                        <p>También en esta barra de pesatañas se mostraran los pluggins que le podemos instalar a grashopper para que sea mas especifico para una u otra función.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/05.png" alt="Image">
+                        <p>En la parte inferior a las pestañas de componentes encontraremos una barra de estado donde podemos ver de izquierda a derecha un botón para abrir un nuevo documento, guardar el documento actual así como el zoom actual del área de trabajo. Un botón para hacer un zoom selectivo. Un botón para crear capturas de posición del zoom para poder ver ciertas partes de nuestro programa. Y el icono con forma de pluma sirve para realizar anotaciones a mano alzada en el área de trabajo esto, sirve muchísimo para realizar pequeños bocetos.</p>
+                        <p>En la parte derecha de esta barra encontraremos opciones de visualización para los componentes de grashopper en rhino.</p>
+                        <p>Por ultimo menciono que nuestra área de trabajo en grasshopper tiene unos limites visibles sin embargo este no tiene ninguna influencia sobre el algoritmo generado por lo que podemos colocar componentes fuera del área de trabajo y estos seguirán funcionando sin problema.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/06.png" alt="Image">
+                        <p></p>
+                        <h4 class="mb-3 font-weight-bold">Distribucion de la interfaz</h4>
+                        <p>Ya que grasshopper es una instancia dentro de rhinoceros tendremos que trabajar simultáneamente en 2 ventanas al mismo tiempo, a menos de que tengamos 2 monitores para trabajar la solución mas comoda seria trabajar solo en perspectiva y partir el escritorio en 2 ventanas esto lo podemos hacer desde Microsoft Windows 11 de manera muy simple.</p>
+                        <ol>
+                        <li><a>Teniendo la ventana de rhinoceros activa en el escritorio hacer clic en la tecla de Windows y presionar la flecha izquierda o derecha del teclado.</a></li>
+                            <img style="" class="w-100 mr-4 mb-3" src="img/b06/07.png" alt="Image">
+                            <li><a>Después hacer clic en la ventana de grasshopper y moverla al lado contrario de la ventana de rhino en mi caso a la derecha con la combinación Windows+derecha</a></li>
+                            <img style="" class="w-100 mr-4 mb-3" src="img/b06/08.png" alt="Image">
+                            <p>De esta manera logramos tener 2 ventanas simultaneas en nuestro monitor.</p>
+                            <li><a>Ahora para trabajar de manera un poco mas cómoda yo personalmente prefiero trabajar la ventana perspectiva en lugar de tener las 4 ventanas en rhino.</a></li>
+                            <img style="" class="w-100 mr-4 mb-3" src="img/b06/08.png" alt="Image">
+                            
+                        </ol>
+                        <p>Haciendo doble clic en el nombre “perspective” se maximiza esta ventana y así del lado izquierdo pantalla con el botón derecho del mouse podemos rotar la ventana y del lado derecho podemos arrastrar nuestro programa hasta ver el componente que deseamos manipular.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/10.png" alt="Image">
+                        <p>Por defecto al seleccionar un componente de grashopper este se mostrará verde en rhinoceros mostrándonos el objeto que deseamos manipular.</p>
+                        <p>Al des seleccionar este se volverá rojo.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/11.png" alt="Image">
+                        <h4 class="mb-3 font-weight-bold">Explicación de los componentes.</h4>
+                        <p>Como ya lo hemos mencionado grasshopper es un lenguaje de programación visual que esta basado en flujo lo que quiere decir que en lugar de escribir líneas de código de un lenguaje de programación. Lo que haremos será conectar unos bloques los cuales tienen internamente unas instrucciones del lenguaje de programación y nosotros solo veremos los parámetros de entrada necesarios para poder procesar esas instrucciones. Y este nos arrojara un resultado visible en el entorno de rhino y puede o no tener parámetros a la salida. Se vería algo como lo que sigue.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/12.png" alt="Image">
+                        <p>Esta sería la forma más básica de un algoritmo de grashopper. De igual forma podemos conectar varios componentes en serie.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/13.png" alt="Image">
+                        <p>De esta forma la salida del componente 1 alimentaria la entrada del componente 2. Además de esto las salidas y entradas de cada componente pueden ser más de una.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/14.png" alt="Image">
+                        <p>Por ejemplo, tomaremos un cubo. Para hacer esto hay varios componentes que nos sirven, sin embargo, yo ocuparé para esto el componente llamado “box rectangle” el cual crea un prisma rectangular que llama caja.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/15.png" alt="Image">
+                        <p>Cuando colocamos un componente en el canvas lo podemos hacer de diferentes formas la primera y mas rápida es hacer doble clic en el canvas y teclear “box”</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/16.png" alt="Image">
+                        <p>O localizar el componente en las pestaña de herramientas de superficie y en la categoría de primitivos</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/17.png" alt="Image">
+                        <p>Al colocar el cursor del mouse sobre el componente nos da una descripción si hacemos un clic lo sujetamos con el mouse y si hacemos otro clic lo soltamos en el área de trabajo.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/18.png" alt="Image">
+                        <p>El color de los componentes nos indica visualmente de su estado en este caso me esta diciendo que tiene una advertencia y aparece un cuadro de dialogo en su parte superior derecha.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/19.png" alt="Image">
+                        <p>Al colocar el mouse sobre del este me describe el componente y en letras rojas me muestra la advertencia.</p>
+                        <p>En el lado izquierdo del icono del componente podemos ver una letra R y una letra H que son las iniciales de Rectangle y Height respectivamente.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/20.png" alt="Image">
+                        <p>Estas letras como están del lado izquierdo corresponden a las entradas del diagrama de los gráficos que vimos con anterioridad.</p>
+                        <p>Si coloco el mouse sobre las letras me da una descripción de lo que necesita el componente para funcionar.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/21.png" alt="Image">
+                        <p>Encima de la descripción a un lado de cada nombre de entrada/salida hay un icono, este corresponde al tipo de información que necesita o brinda dicho componente. Esto nos sirve para saber que objeto podemos conectar en cada lado.</p>
+                        <p>Así mismo debajo de la descripción existe un campo rectangular donde se nos informa si existe información precargada o si no hay información.</p>
+                        <p>En el campo Height podemos ver que existe un rango de caro a diez como nos esta indicando esto le dará un valor de 10 milimetros.</p>
+                        <p></p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/22.png" alt="Image">
+                        <p>Por ejemplo, este error me esta hablando de que no pudo aceptar una cadena de caracteres con la palabra “rectangle” ya que estaba esperando recibir una definición de curva.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/23.png" alt="Image">
+                        <p>Como en el ejemplo conectamos un rectángulo en la entrada y el componente cambia a color gris e inmediatamente el entorno de rhinoceros muestra el cubo con la definición del algoritmo.</p>
+                        <p>Para conectar dos componentes entre si es suficiente con hacer clic sostener y soltar del punto A al punto B.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/24.png" alt="Image">
+                        <p>La línea creada entre ambos componentes nos brinda información sobre el algoritmo.</p>
+                        <img style="" class="w-100 mr-4 mb-3" src="img/b06/25.png" alt="Image">
+                        <p>Si vemos una línea solida nos indica que tenemos solo 1 elemento.</p>
+                        <p>Si vemos una línea gruesa compuesta de dos líneas solidas negras y una línea blanca significa que tenemos múltiples elementos.</p>
+                        <p>Si tenemos una línea punteada entre dos componentes significa que se trata de una estructura de árbol, ese tema lo veremos mas adelante cuando hablemos de listas y estructuras de árbol.</p>
+                        <p>Hemos llegado al final de este artículo, como siempre espero que este recurso te haya sido de ayuda. Te recuerdo que te dejo en un archivo comprimido el archivo de rhino .3dm y el archivo de grashopper .gh para que puedas ver mejor lo que vimos en este artículo.</p>
+
+                        
                     </div>
                     <div class="col-12 py-4">
                         <div class="btn-group btn-group-lg w-100">
