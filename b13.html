@@ -93,17 +93,107 @@
                 <div class="container py-5 px-2 bg-white">
                 <div class="row px-4">
                     <div class="col-12">
-                        <img class="img-fluid mb-4" src="img/detail.jpg" alt="Image">
-                        <h2 class="mb-3 font-weight-bold">Nonumy ipsum takimata et sanct</h2>
+                        <img class="img-fluid mb-4" src="img/b13/portada1.gif" alt="Image">
+                        <h2 class="mb-3 font-weight-bold">PRC 103</h2>
                         <div class="d-flex">
-                            <p class="mr-3 text-muted"><i class="fa fa-calendar-alt"></i> 01-Jan-2045</p>
-                            <p class="mr-3 text-muted"><i class="fa fa-folder"></i> Web Design</p>
-                            <p class="mr-3 text-muted"><i class="fa fa-comments"></i> 15 Comments</p>
+                            <p class="mr-3 text-muted"><i class="fa fa-calendar-alt"></i>11/07/2024</p>
+                            <p class="mr-3 text-muted"><i class="fa fa-folder"></i> Robotica Creativa</p>
+                            
                         </div>
-                        <p>Clita duo sadipscing amet ea ut kasd amet dolore, sed erat at dolore vero tempor et sit amet, amet amet elitr et consetetur ea duo. Gubergren tempor rebum clita at sit diam. Ea sadipscing voluptua et sit diam diam sed, gubergren magna ipsum lorem clita dolores nonumy dolor. Gubergren duo invidunt elitr amet labore dolores justo sanctus nonumy. Accusam diam tempor at ea clita dolores dolor et ipsum, dolor voluptua consetetur gubergren sit, no consetetur kasd vero invidunt clita dolore elitr eos, accusam amet et labore sed sadipscing accusam labore dolores. Eirmod no lorem sed dolor nonumy consetetur tempor sed.</p>
-                        <h3 class="mb-3 font-weight-bold">Est dolor lorem et ea</h3>
-                        <img class="w-50 float-left mr-4 mb-3" src="img/blog-1.jpg" alt="Image">
-                        <p>Diam dolor est labore duo invidunt ipsum clita et, sed et lorem voluptua tempor invidunt at est sanctus sanctus. Clita dolores sit kasd diam takimata justo diam lorem sed. Magna amet sed rebum eos. Clita no magna no dolor erat diam tempor rebum consetetur, sanctus labore sed nonumy diam lorem amet eirmod. No at tempor sea diam kasd, takimata ea nonumy elitr sadipscing gubergren erat. Gubergren at lorem invidunt sadipscing rebum sit amet ut ut, voluptua diam dolores at sadipscing stet. Clita dolor amet dolor ipsum vero ea ea eos. Invidunt sed diam dolores takimata dolor dolore dolore sit. Sit ipsum erat amet lorem et, magna sea at sed et eos. Accusam eirmod kasd lorem clita sanctus ut consetetur et. Et duo tempor sea kasd clita ipsum et. Takimata kasd diam justo est eos erat aliquyam et ut. Ea sed sadipscing no justo et eos labore, gubergren ipsum magna dolor lorem dolore, elitr aliquyam takimata sea kasd dolores diam, amet et est accusam labore eirmod vero et voluptua. Amet labore clita duo et no. Rebum voluptua magna eos magna, justo gubergren labore sit voluptua eos. Dolores et no stet magna et gubergren amet dolor sit, lorem dolore est vero et.</p>
+                        <div>
+                        <h3>Definir base física y virtualmente</h3>
+                        
+                        </div>
+                        <div>
+                        <h3>Definir herramienta física y virtualmente</h3>
+                        </div>
+                        <div>
+                            <h3>primer programa en KUKA &#124; PRC</h3>
+                            <b>Descargo de responsabilidad:</b>
+                            <p>LAHV Design es un proyecto personal sin fines de lucro, todos los recursos (redactados y/o descargables) aquí compartidos son libres de uso, sin embargo, no me hago responsable de ninguna manera de las decisiones que terceros tomen con dicho recuso.
+                            </p> 
+                            <p>El primer programa que crearemos será solo para ejercitar un poco la teoría de GH y conocer mejor los componentes del plugin KUKA &#124; PRC.</p>
+                            <p>El objetivo de dicho programa será comprender como la base y el TCP afectan las coordenadas de rhino.</p>
+                            <img class="w-100" src="img/b13/01.png">
+                            <p>Obviamente lo primero será abrir un archivo nuevo de rhino y uno de GH.</p>
+                            <p>Asumiré que ya descargaste la última versión del plugin desde la pagina oficial de robots in architecture</p>
+                            <img class="w-100" src="img/b13/02.png">
+                            <a target="_blank" href="www.robotsinarchitecture.org">la pagina oficial de Robots in architecture</a>
+                            <p>una vez realizada la instalación tendrás una pestaña de herramientas extra en la parte superior donde encontraras los componentes de este plugin.</p>
+                            <p>Claro, que siempre podrás buscar los comandos haciendo doble clic y escribiendo el nombre del comando del plugin que necesites.</p>
+                            <img class="w-50 float-left" src="img/b13/03.png">
+                            <p style="margin-bottom: 10%">Lo primero que colocaremos será un componente de núcleo o “core”, este componente es el principal de nuestro proyecto por lo que siempre va primero.</p>
+                            <img class="w-50 float-right" src="img/b13/04.png">
+                            <p>Primero se muestra en color naranja para advertirnos que necesita información para poder trabajar, analicemos más a detalle esto.</p>
+                            <p>La entrada “simulation slider” es una entrada opcional que sirve para analizar el movimiento del robot de forma manual. Aquí podremos observar si los ejes colisionan entre sí y en qué punto del código tendremos el error.</p>
+                            <p>La entrada llamada “KUKA|PRC commands” es obligatoria y hace referencia a las instrucciones que el robot deberá seguir una a la vez en el orden en el que se le fue asignado.</p>
+                            <p>La entrada llamada “tool” es opcional y corresponde a la definición que almacena la información del TCP dentro del CORE. Esto sirve para simular correctamente el código.</p>
+                            <p>La entrada llamada “robot” es obligatoria y es precisamente el modelo exacto de robot para el cual estaremos generando el código, ya que diferentes modelos tienen diferentes Radios de alcance. Y eso afectara tanto nuestra simulación como la generación del código.</p>
+                            <p>Y la entrada “Collision Geometry” es opcional y su objetivo es definir geometrías con las cuales el robo pueda colisionar. Una mesa de trabajo, otro robot, Etc.</p>
+                            <p>El botón de la parte inferior “KUKA|PRC Settings” nos abre las configuraciones internas del plugin para poder manipular detalles como la posición de home, la velocidad de los motores, la resolución de la simulación, la licencia asociada a esa instalación del plugin.</p>
+                            <img class="w-100" src="img/b13/05.png">
+                            <p>Analizaremos mas a detalle la ventana de las configuraciones más adelante, sin embargo, creo que por el momento explicare ventana principal.</p>
+                            <p>La ventana “settings” o configuraciones se compone de 5 secciones que son output, speed, Simulation, data y base.</p>
+                            <p>En la sección llamada “output” podremos definir el directorio de nuestro sistema operativo, donde estaremos generando nuestro código. krl (kuka robot language) y así como poder cambiar el nombre de nuestro archivo, Es muy importante recordar que el nombre del archivo no puede tener espacios entre palabras ni caracteres especiales.</p>
+                            <p>En la sección llamada “simulation” podemos configurar algunas opciones que tienen que ver con la reproducción de la simulación y que afectan el rendimiento del ordenador que está generando nuestro código.</p>
+                            <p>En la sección “data” podemos revisar cuantos comandos estará ejecutando nuestro programa, así como el numero de la herramienta asociada al código y la versión de nuestro software, así como el vencimiento de la licencia.</p>
+                            <p>En la sección “base” podemos definir la posición de la base que estará usando el robot como referencia para simular y generar correctamente el código, es sumamente importante colocar el numero de la base que tenemos configurada en el KSS (Kuka System Software) del sistema. </p>
+                            <p>Regresemos al tema, en las entradas del componente principal vamos a usar el robot que usare para estos artículos, El cual se trata de un robot marca KUKA modelo KR120-R2700-2 con un control de robot KRC-4 como herramienta para este ejercicio estaré usando un actuador final genérico llamado “generic spindle” el cual me permite ver el TCP claramente en la punta de la herramienta.</p>
+                            <img class="w-100" src="img/b13/06.png">
+                            <p>Ahora para este ejercicio, construiremos 2 puntos de los cuales podamos manipular sus coordenadas X, Y y Z.</p>
+                            <img class="w-100" src="img/b13/07.png">
+                            <p>Esta es una definición que sirve para colocar un punto y mantener las coordenadas de este dentro de un rango de dimensiones para que el robot no entre tan seguido en posiciones inalcanzables ya que este robot tiene un rango de 2700 milímetros, pues eso es lo que use como base.</p>
+                            <p>Esta es mi versión de un “multidimensional slider” en internet hay gente que lo ha intentado, está la leí en algún lado y me gusto porque está bastante siempre y en esta ocasión me va bien para explicar como funciona un dominio numérico en GH”.</p>
+                            <ol>
+                            <li>El selector de color en la configuración del sistema RGB funciona muy bien para este fin ya que usa un rango definido por el sistema de color que va del 0 al 255 que habla del porcentaje de saturación de estos color primario</li>
+                            <li>(2)	Partir ARGB toma un color en la entrada y en la salida brinda sus parámetros por componente de color rojo azul o verde.</li>
+                            <li>(3)	Un remapeo de dominio es un componente matemático que sirve hacer coincidir campos de datos de una fuente con campos de datos de otra fuente. <img  width="50%" src="img/b13/08.png"></li>
+                            <li>Es el rango de datos que escogí para esta definición ya que el robot tiene un alcance de 2700 mm de longitud, al estar la base posicionada en 0,0,0 pues entonces el rango de coordenadas dentro de este -2700 a 2700 también coincide con el alcance del robot.</li>
+                            <li>(5)	Es una operación matemática que forma algo conocido como dominio o rango. Que se trata de un intervalo de numero que definen un espacio. En este caso son coordenadas en el eje X, Y y Z.</li>
+                            <li>(6)	Toma las salidas de los remapeos de los colores (en los paneles) y los usa para construir un punto con esas coordenadas.</li>
+                            </ol>
+                            <img class="w-100" src="img/b13/09.png">
+                            <p>Ahora solo hay que duplicar esta definición para crear el segundo punto.</p>
+                            <p>Si encendemos los últimos componentes de cada sección el viewport de rhino se vería asi.</p>
+                            <img class="w-100" src="img/b13/10.png">
+                            <p>El robot se muestra en una posición estática no importando a donde yo mueva los puntos, esto se debe a que aun no he vinculado esos puntos con comandos en el componente de “KUKA&#124;CORE”. Por lo que el robot se queda estático en la posición de home sin importar si yo muevo el slider de simulación.</p>
+                            <p>Primero creare un movimiento lineal entre el punto A y el B, primero debere crear planos xy en cada punto para poder colocarle el comando de KUKA &#124; PRC</p>
+                            <img class="w-100" src="img/b13/11.png">
+                            <p> Ahora, sucedieron un par de cosa de la imagen anterior a esta, veamos. Primero en la salida de cada punto lo conecte aun comando de línea (solo necesita dos puntos), esto lo hice para ver de color rojo la trayectoria que recorre el robot en esta operación (solo de ayuda visual). Entonces inmediatamente coloque un componente de plano XY compartido para los dos puntos, el componente crea una lista sencilla con los datos de cada plano en el orden en el que los ingresé en el componente. A la salida del plano conecte el comando de kuka|prc “LINear Movement” y la salida de este ya la pude colocar en KUKA&#124;CORE.</p>
+                            <P>En este momento el slider ya funciona.</P>
+                            <img class="w-100" src="img/b13/12.png">
+                            <P>Conforme movemos el slider, podemos ver los movimientos de los ejes que el robot tendría que realizar para lograr alcanzar esas coordenadas, y podemos ver el avance te toda la trayectoria definido por la línea que camba de gris claro a gris oscuro.</P>
+                            <img class="w-100" src="img/b13/slider_lin.gif">
+                            <b>Movimiento PTP</b>
+                            <p>Ahora sustituiremos el componente encargado del movimiento lineal por un comando llamado PTP Movement en el que nos podremos dar cuenta de igual forma que la trayectoria cambia de color conforme vamos avanzando del slider.</p>
+                            <img class="w-100" src="img/b13/13.png">
+                            <p>Sin embargo, la línea roja que trazamos con anterioridad al compararlo con la trayectoria vemos que el robot no respeta esta trayectoria ya que lo que importa en el comando PTP es la velocidad de los motores en lugar de mantener la posición durante el trayecto.</p>
+                            <img class="w-100" src="img/b13/slider_ptp.gif">
+                            <p>Ahora veremos lo que sucede en la simulación si altero los planos de orientación.</p>
+                            <img class="w-100" src="img/b13/14.png">
+                            <p>Primero haremos mas grande el tamaño de los planos que ya tenemos para poder observar lo que sucede, como son planos XY estarán paralelos al plano XY original (la base del robot) y sus ejes serán paralelos entre sí.</p>
+                            <img class="w-100" src="img/b13/15.png">
+                            <p>ahora colocamos un componente para visualizar vectores en la salida de cada plano.</p>
+                            <p>Veremos que las flechas están apuntando hacia arriba en Z ya que en este caso el eje Z es la dirección normal de ese plano.</p>
+                            <img class="w-100" src="img/b13/16.png">
+                            <p>Ahora que he colocado un comando llamado “flip plane” y volteado el Eje Z en uno de los puntos podemos ver como el vector mantiene su ubicación normal, sin embargo, invirtió su sentido y ahora está apuntando hacia abajo.</p>
+                            <img class="w-100" src="img/b13/flip.gif">
+                            <p>Entonces puedes ver como el TCP del robot intenta seguir el vector normal al plano xy que le invertimos el eje Z.</p>
+                            <p>Que hubiera pasado si en lugar de planos XY hubiera ocupado otro de los componentes plano de la categoría de vector?.</p>
+                            <img class="w-100" src="img/b13/17.png">
+                            <p>Ahora podríamos observar que la dirección normal con respecto al plano sigue siendo la misma sin embargo cambia su orientación y sentido con respecto al origen de rhino (en la base del robot).</p>
+                            <img class="w-100" src="img/b13/planosxz.gif">
+                            <p>asi el sentido del movimiento del robot haria que la herramienta se incline</p>
+                            <img class="w-100" src="img/b13/18.png">
+                            <p>Y si hacemos flip en el eje Z de uno de los dos puntos pasan 2 cosas, se invierte el sentido de la flecha del vector correspondiente y nos aparece un error en el componente KUKA CORE ya que el robot entraria en colision en el eje 5.</p>
+                            <img class="w-100" src="img/b13/planosxzflip.gif">
+                            <p>Sin embargo el plugin sigue funcionando y nos permite simular el movimiento para ver hacia donde iria nuestro TCP.</p>
+                            <img class="w-100" src="img/b13/19.png">
+                            <p>Entonces lo que podemos ver que sucede es que el eje que siempre busca alinear corresponde al eje Z de la herramienta con la normal de cada plano que creemos en GH.</p>
+                            <p>Hemos llegado al final de este artículo, como siempre espero que este recurso te haya sido de ayuda. Te recuerdo que te dejo en un archivo comprimido el archivo de rhino .3dm y el archivo de grashopper .gh para que puedas ver mejor lo que vimos en este artículo.</p>
+                            <a href="doc/blog/b13/primer_prc.rar">Aqui</a>
+                            
+                        </div>
                     </div>
                     <div class="col-12 py-4">
                         <div class="btn-group btn-group-lg w-100">
